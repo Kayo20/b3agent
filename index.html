@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+     rel="stylesheet">
+     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet">
+      <link rel="stylesheet" href="band.css">
+      <link rel="shortcut icon" href="logo.png">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE FREE AGENCY</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg " id="head" style=" background-color: rgb(51, 50, 50);">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" class="logo" srcset=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">SERVICE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">CONTACT</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="section1" >
+        <div class="rite">
+            <h1>Be Free Agency</h1>
+        <p>Expert social & community service staffing solutions</p>
+        </div>
+    </section>
+    <section class="section2" id="about">
+        <h1>ABOUT</h1>
+        <div class="text">
+            <p>B3 Agency is a recruitment company that specialises in the recruitment of
+                Support workers in the disability and youth support sector. <br>
+                With a background in support
+                work for over 12 years, we know what it is like to be support staff. <br>
+                 We aim to identify some of the challenges employers often face when
+                hiring the right staff. <br><br>
+                We are available at your request to provide you with the right kind of talent.
+            </p>
+        </div>
+      </section>
+    <section class="section3" id="service">
+      <h1>SERVICE</h1>
+        <div class="bord">
+        </div>
+        
+        <p><h3>Recruitment</h3>
+            With more than 12 years experience and background in support work, <br>
+             we know the demands in the industry can be challenging so we want to help make things easier. <br>
+              The way we implement this are: <br>
+               ⁃ Communication is clear with agency and staff <br>
+                ⁃ Strong pool of talent and industry experienced <br>
+                 ⁃ Honest job briefing and accurate understanding of the Job role and description <br>
+                  ⁃ Ongoing training in house trainer industry experience <br>
+                   ⁃ Proper screening via phone/video and face to face interview <br>
+                    ⁃ Promote positive working environment
+        </p>
+    </section>
+    <div class="nat">
+      <div class="man">
+        <div class="section5" id="contact">
+          <h1>CONTACT</h1>
+          </div>
+         
+        <div class="desc">
+          <h4>•   Sydney, New South Wales, Australia</h4>
+          <h4>•   +61-0423329997</h4>
+          <h4> •	jobs@b3freeagency.com</h4>
+        </div>
+      </div>
+    </div>
+    <div class="section4">
+        <form onsubmit="sendEmail(); reset(); return false; ">
+            <input type="text" id="Name" placeholder="Name"><br>
+            <input type="text" id="Number" placeholder="Phone Number"><br>
+            <input type="text" id="Email" placeholder="Email Address">
+            <textarea name="message" id="Message" placeholder="Message" cols="30" rows="10"></textarea>
+            <button type="submit">CONTACT US</button>
+        </form>
+    </div>
+    </div>
+</div>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "b3freejobs@gmail.com",
+            Password : "Frankins1#",
+            To : 'jobs@b3freeagency.com',
+            From : document.getElementById("Email").value,
+            Subject : "This is the subject",
+            Body : "Name: " + document.getElementById("Name").value
+                + "<br> Number: " + document.getElementById("Number").value
+                + "<br> Email: " + document.getElementById("Email").value
+                + "<br> Message: " + document.getElementById("Message").value
+        }).then(
+        message => alert("Message sent succesfully")
+        );
+    }
+</script>    
+</body>
+</html>
